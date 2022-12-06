@@ -1,0 +1,12 @@
+#!/bin/bash
+
+### my git rep install
+sudo apt install fortune-mod
+sudo apt install tree
+sudo apt install net-tools
+sudo dnf install git-all
+sudo apt install unzip
+
+
+
+

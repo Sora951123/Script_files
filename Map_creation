@@ -1,0 +1,18 @@
+#!/bin/bash
+#sudo mkdir /testfile
+
+for i  in {1..5}
+do
+cd /testfile/
+echo -n "Enter the directory name:"
+read newdirname
+if [ -d "$newdirname" ]; then
+echo "Directory already exists" ;
+else
+`mkdir -p $newdirname`;
+echo "$newdirname directory is created"
+fi
+done
+
+
+

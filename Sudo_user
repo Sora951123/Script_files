@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo -n "New Username: "
+read username
+
+for i  in {1..5}
+do
+	if [ -u "$username" ]; then
+        echo "use exzists";
+	else
+	sudo adduser  $username
+	echo "$newdirname is created"
+	fi
+	sudo usermod -aG sudo $username
+done
+
+
+
+
+
