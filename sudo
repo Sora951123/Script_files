@@ -1,0 +1,21 @@
+#!/bin/bash
+
+input="/media/usersdata/users"
+
+while read -r line
+do
+	if [ -u "$line" ]; then
+        echo "use exzists";
+	else
+	sudo adduser --gecos $line $line
+	echo "$line is created"
+	fi
+	sudo usermod -aG sudo $line
+
+done < "$input"
+
+
+grep '^sudo:.*$' /etc/group | cut -d: -f4
+
+
+
